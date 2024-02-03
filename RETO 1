@@ -1,0 +1,21 @@
+def modificar_lista(lista):
+    nueva_lista = []
+
+    for numeros in lista:
+        # Convierte el número a una lista de dígitos
+        digitos = [int(digito) for digito in str(numeros)]
+
+        # Elimina los dígitos mayores o iguales a 4
+        digitos_filtrados = [digito for digito in digitos if digito < 4]
+
+        # Convierte la lista filtrada de dígitos a un número
+        nuevo_numero = int(''.join(map(str, digitos_filtrados)))
+
+        # Agrega el nuevo número a la lista
+        nueva_lista.append(nuevo_numero)
+
+    return nueva_lista
+    
+    numeros = [1234, 4321, 1023, 3400, 4444]
+resultado = modificar_lista (numeros)
+print(resultado)
