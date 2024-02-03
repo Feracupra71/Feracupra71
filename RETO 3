@@ -1,0 +1,16 @@
+def min_cambio_no_posible(monedas):
+    monedas.sort()  # Ordenar las monedas de forma ascendente
+    total = 1  # Inicializar el valor mínimo posible
+
+    for moneda in monedas:
+        if moneda <= total:
+            total += moneda  # Agregar la moneda al total si es posible
+        else:
+            break  # Salir del bucle si no se puede agregar más monedas
+
+    return total
+
+# Ejemplo de uso
+monedas = [5, 7, 1, 1, 2, 3, 22]
+resultado = min_cambio_no_posible(monedas)
+print(resultado)
