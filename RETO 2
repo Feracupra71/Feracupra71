@@ -1,0 +1,10 @@
+def cuadrados_ascendentes(arr):
+    # Calcula los cuadrados y filtra según el rango [0, S^2]
+    cuadrados_filtrados = [x**2 for x in arr if 0 <= x**2 <= 4**2]
+
+    return cuadrados_filtrados
+
+# Ejemplo de uso
+array_entrada = [1, 2, 3, 4, 5]
+resultado = cuadrados_ascendentes(array_entrada)
+print(resultado)
